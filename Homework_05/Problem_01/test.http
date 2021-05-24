@@ -1,0 +1,36 @@
+POST http://localhost:5000/api/games
+content-type: application/json
+
+{
+	"rate": 4,	
+	"title": "The Game of Thrones",
+	"year": 2018,
+	"price": 34,
+	"minPlayers": 2,
+	"maxPlayers": 6,		
+	"minAge": 9,
+	"designers": "Abyalew Ambaneh"
+}
+
+###
+PUT http://localhost:5000/api/games/60a863953d6a4711a0724b20
+content-type: application/json
+
+{
+	"rate": 4,	
+	"title": "The Game of Thrones second Version",
+	"year": 2020,
+	"price": 34,
+	"minPlayers": 2,
+	"maxPlayers": 6,		
+	"minAge": 9,
+	"designers": "New Designer"
+}
+
+###
+DELETE http://localhost:5000/api/games/60a863953d6a4711a0724b20
+###
+GET http://localhost:5000/api/games
+
+###
+Get http://localhost:5000/api/games/60a863953d6a4711a0724b20
