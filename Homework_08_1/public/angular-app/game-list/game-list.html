@@ -1,0 +1,7 @@
+<h1>{{vm.title}}</h1>
+<!-- <h1>{{vm.games.title}}</h1> -->
+<ul>
+  <li ng-repeat="x in vm.games">
+    <a ng-href="#!/games/{{x._id}}">{{x.title}}</a>
+  </li>
+</ul>
