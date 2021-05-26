@@ -1,0 +1,17 @@
+<h1>
+  Information about player:
+  
+</h1>
+
+<p>
+  <p>{{vm.players.last_name}} {{vm.players.first_name}}</p>
+ 
+  Postion: {{vm.players.position }} <br/>
+  CurrentTeam: {{vm.players.current_team.name}} <br />
+  teams played for :
+  <ul>
+    <li ng-repeat="teams in vm.players.teams_played_for">{{teams.name}} 
+      <!-- used uppercase filter -->
+    </li>
+  </ul>
+</p>

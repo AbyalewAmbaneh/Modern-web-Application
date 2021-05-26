@@ -1,0 +1,12 @@
+<h1>{{vm.title}}</h1>
+
+<!-- <h1>{{vm.players}}</h1> -->
+
+<ul>
+  <li ng-repeat="player in vm.players">
+    <a ng-href="#!/players/{{player._id}}/"
+      >{{player.first_name | uppercase}}</a
+    >
+    <!-- used uppercase filter -->
+  </li>
+</ul>
