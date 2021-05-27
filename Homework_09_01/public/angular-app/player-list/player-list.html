@@ -1,0 +1,63 @@
+<h1>{{vm.title}}</h1>
+
+<!-- <h1>{{vm.players}}</h1> -->
+
+<ul>
+  <li ng-repeat="player in vm.players">
+    <a ng-href="#!/players/{{player._id}}/"
+      >{{player.first_name | uppercase}}</a
+    >
+    <!-- used uppercase filter -->
+  </li>
+</ul>
+<br />
+
+<h3>Create your favorite player</h3>
+<br />
+<div style="width: 10%">
+  <form name="vm.playerForm" ng-submit="vm.addPlayer()">
+    <div class="mb-3">
+      <label for="FirstName" class="form-label">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="FirstName"
+        aria-describedby="F_nameHelp"
+        name="first_name"
+        required
+        ng-model="vm.newPlayer.first_name"
+      />
+      <div id="FirstNameHelp" class="form-text">
+        Please Insert Players First Name.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="LastName" class="form-label">last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="LastName"
+        name="last_name"
+        required
+        ng-model="vm.newPlayer.last_name"
+      />
+    </div>
+    <div id="LastNameHelp" class="form-text">
+      Please Insert Players Last Name.
+    </div>
+    <div class="mb-3">
+      <label for="Postion" class="form-label">Postion </label>
+      <input
+        type="text"
+        class="form-control"
+        id="Postion"
+        name="position"
+        required
+        ng-model="vm.newPlayer.position"
+      />
+    </div>
+    <div id="PostionHelp" class="form-text">Please Insert Players Postion.</div>
+
+    <button type="submit" class="btn btn-primary">Add Player</button>
+  </form>
+</div>

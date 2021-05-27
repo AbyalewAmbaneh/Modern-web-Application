@@ -1,0 +1,41 @@
+<!DOCTYPE >
+<html ng-app="meanPlayers">
+  <head>
+    <title>MEAN Player</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <script src="./angular-app/app.js" defer></script>
+    <script
+      src="./angular-app/player-list/player-list-controller.js"
+      defer
+    ></script>
+    <script
+      src="./angular-app/player-one/player-one-controller.js"
+      defer
+    ></script>
+    <script
+      src="./angular-app/player-data-factory/player-data-factory.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <div ng-view></div>
+
+    <footer>
+      <a href="https://www.football.com" target="_blank">
+        <img
+          src="images/Premier_League_Logo.svg.webp"
+          alt="Premier_League_Logo image"
+          width="300"
+          height="120"
+        />
+      </a>
+      <p class="text-center text-black-50">
+        The Football Association Premier League Limited
+      </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  </body>
+</html>
