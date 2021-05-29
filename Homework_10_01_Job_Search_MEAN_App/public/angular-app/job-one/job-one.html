@@ -1,0 +1,144 @@
+<h1>Information about player:</h1>
+
+<h2>{{vm.jobs.title}}</h2>
+
+<ul>
+  <li>Salary: {{vm.jobs.salary |currency }}</li>
+  <!--currency:"£"-->
+  <li>Description: {{vm.jobs.description }}</li>
+  <li>Experience: {{vm.jobs.experience | number: 0}}</li>
+  <li>Post Date: {{ vm.jobs.postDate | date:'MM/dd/yyyy' }}</li>
+  <li>
+    Skill Sets:
+    <ul>
+      <li ng-repeat="skill in vm.jobs.skill">{{skill}}</li>
+    </ul>
+  </li>
+</ul>
+
+<button ng-click="vm.RemoveOneJob()" type="button" class="btn btn-danger">
+  Delete Player
+</button>
+<button ng-click="vm.show_hide()" type="button" class="btn btn-warning">
+  Update Player
+</button>
+<br /><br />
+
+
+<h3>Update Job Information here</h3>
+
+<div style="width: 70%" ng-hide="vm.IsHidden" class="content" >
+    <form style="width: 100%" name="vm.jobForm" ng-submit="vm.replaceOneJob()">
+        <div class="row" >
+    <!---///////////////////////////////-->
+    
+            <div class="form-group col-6">
+          <label for="Title" class="form-label">Job Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Title"
+            aria-describedby="TitleHelp"
+            name="job_title"
+            required
+            ng-model="vm.newJob.title"
+          />
+          <div id="Title" class="form-text">
+            Please Insert Job Title here.
+          </div>
+            </div>
+    
+    <!---///////////////////////////////-->
+    
+            <div class="form-group col-6">
+          <label for="Salary" class="form-label">Salary</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Salary"
+            name="Salary"
+            required
+            ng-model="vm.newJob.salary"
+          /><div id="SalaryHelp" class="form-text">
+            Please Insert Jobs Salary.
+              </div>
+            </div> 
+            
+     <!---///////////////////////////////-->       
+            <div class="form-group col-6">          
+          <label for="Description" class="form-label">Description </label>
+          <input
+            type="text"
+            class="form-control"
+            id="Description"
+            name="Description"
+            required
+            ng-model="vm.newJob.description"
+          />
+          <div id="DescriptionHelp" class="form-text">
+            Please Insert Job Description.
+             </div>
+            </div>       
+    
+     <!---///////////////////////////////-->   
+     
+    
+     <div class="form-group col-6">          
+      <label for="Skill" class="form-label">Skill </label>
+      <input
+        type="text"
+        class="form-control"
+        id="Skill"
+        name="Skill"
+        required
+        ng-model="vm.newJob.skill"
+      />
+      <div id="SkillHelp" class="form-text">
+        Please Insert Job Skill Requirment.
+         </div>
+        </div>       
+    
+    <!---///////////////////////////////-->  
+    
+    
+            <div class="form-group col-6">
+              <label for="Experiance" class="form-label">Experiance </label>
+              <input
+                type="text"
+                class="form-control"
+                id="Experiance"
+                aria-describedby="ExperianceHelp"
+                name="Experiance"
+                required
+                ng-model="vm.newJob.experience"
+              />
+              <div id="ExperianceHelp" class="form-text">
+                Please Insert Job Experiance Requirement.
+              </div>
+            </div>
+    
+    
+      <!---///////////////////////////////-->    
+      
+      
+            <div class="form-group col-6">
+              <label for="Posting_Date" class="form-label">Posting Date </label>
+              <input
+                type="text"
+                class="form-control"
+                id="Posting_Date"
+                name="Posting_Date"
+                required
+                ng-model="vm.newJob.postDate"
+              />
+              <div id="Team_StadiumHelp" class="form-text">
+                Please Insert Jobs Posting Date.
+                  </div>
+            </div>
+          
+    <!---///////////////////////////////-->  
+    
+       </div>
+       <button type="submit" class="btn btn-primary">Submit Changes</button>
+          </div>
+</div>
