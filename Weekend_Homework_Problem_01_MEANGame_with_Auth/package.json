@@ -1,0 +1,25 @@
+{
+  "name": "assignment3",
+  "version": "1.0.0",
+  "description": "This is nodejs program to display 3 games or as many as user specifies but not exceeding 7 using gameDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gamesDb"
+  ],
+  "author": "Abyalew",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-jwt": "^0.1.11",
+    "angular-route": "^1.8.2",
+    "bcrypt-nodejs": "0.0.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.7",
+    "mongoose": "^5.12.10"
+  }
+}

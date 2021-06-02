@@ -1,0 +1,20 @@
+Information about game:
+<h1>
+  Information about game:
+  <p>{{vm.games.title}}</p>
+</h1>
+
+<p>
+  Price: {{vm.games.price | currency}} <br />
+  Minimum Players: {{vm.games.minPlayers}} <br />
+  Maximum Players: {{vm.games.maxPlayers}} <br />
+  Minimum Age: {{vm.games.minAge}}<br />
+  Publisher: {{vm.games.publisher.name}}
+</p>
+
+<div ng-if="vm.isLoggedIn()">
+  <button ng-click="vm.RemoveOneGame()" type="button" class="btn btn-danger">
+    Delete
+  </button>
+</div>
+<!-- This is the result {{vm.game}} -->
